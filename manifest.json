@@ -1,0 +1,33 @@
+{
+  "data": {
+    "tables": [
+      {
+        "id": "timezones",
+        "label": "Timezones",
+        "dscc": { "tableId": "timezones" },
+        "columns": [
+          { "id": "label", "label": "Label", "type": "TEXT", "concept": "DIMENSION", "isRequired": true },
+          { "id": "tz", "label": "IANA Timezone", "type": "TEXT", "concept": "DIMENSION", "isRequired": true }
+        ]
+      }
+    ]
+  },
+  "style": {
+    "clockFormat": {
+      "label": "Formato",
+      "elements": [
+        { "type": "CHECKBOX", "id": "is24h", "label": "Usar formato 24h", "defaultValue": true },
+        { "type": "CHECKBOX", "id": "showDate", "label": "Mostrar fecha", "defaultValue": true }
+      ]
+    },
+    "appearance": {
+      "label": "Apariencia",
+      "elements": [
+        { "type": "FONT_COLOR", "id": "fontColor", "label": "Color de texto" },
+        { "type": "FONT_SIZE", "id": "fontSize", "label": "Tamaño de fuente", "defaultValue": 22 },
+        { "type": "TEXTINPUT", "id": "title", "label": "Título", "defaultValue": "World Clock" }
+      ]
+    }
+  },
+  "resources": { "js": ["index.js"], "css": ["styles.css"] }
+}
